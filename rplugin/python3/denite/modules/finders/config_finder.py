@@ -1,6 +1,6 @@
 import os
 import finder_utils
-from view_file import ViewFile
+from config_file import ConfigFile
 
 
 class ConfigFinder:
@@ -13,4 +13,4 @@ class ConfigFinder:
     def find_files(self):
         files = finder_utils.glob_project(self.root_path, self.GLOB_PATTERN)
         files = [filename for filename in files if os.path.isfile(filename)]
-        return [ViewFile(filename) for filename in files]
+        return [ConfigFile(filename) for filename in files]

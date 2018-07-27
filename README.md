@@ -20,6 +20,7 @@ Denite rails:test
 Denite rails:spec
 Denite rails:config
 Denite rails:db
+Denite rails:lib
 ```
 
 ## Keymap examples
@@ -37,6 +38,7 @@ nnoremap <silent> [rails]r :<C-u>Denite<Space>rails:test<Return>
 nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:spec<Return>
 nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:config<Return>
 nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:db<Return>
+nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:lib<Return>
 ```
 
 ## TODO

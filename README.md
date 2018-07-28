@@ -16,6 +16,7 @@ Denite rails:model
 Denite rails:controller
 Denite rails:view
 Denite rails:helper
+Denite rails:assets
 Denite rails:test
 Denite rails:spec
 Denite rails:config
@@ -39,6 +40,7 @@ nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:spec<Return>
 nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:config<Return>
 nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:db<Return>
 nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:lib<Return>
+nnoremap <silent> [rails]s :<C-u>Denite<Space>rails:assets<Return>
 ```
 
 ## TODO

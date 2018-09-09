@@ -21,6 +21,7 @@ from model_finder import ModelFinder # noqa
 from controller_finder import ControllerFinder # noqa
 from helper_finder import HelperFinder # noqa
 from view_finder import ViewFinder # noqa
+from frontend_finder import FrontendFinder # noqa
 from test_finder import TestFinder # noqa
 from spec_finder import SpecFinder # noqa
 from config_finder import ConfigFinder # noqa
@@ -78,6 +79,8 @@ class Source(Base):
         self.vim.command('highlight link deniteSource_railsApp Statement')
         self.vim.command('syntax match deniteSource_railsAll /All:/')
         self.vim.command('highlight link deniteSource_railsAll Statement')
+        self.vim.command('syntax match deniteSource_railsFrontend /Frontend:/')
+        self.vim.command('highlight link deniteSource_railsFrontend Statement')
 
     def gather_candidates(self, context):
         file_list = self._find_files(context)
@@ -103,6 +106,8 @@ class Source(Base):
             finder_class = HelperFinder
         elif target == 'view':
             finder_class = ViewFinder
+        elif target == 'frontend':
+            finder_class = FrontendFinder
         elif target == 'test':
             finder_class = TestFinder
         elif target == 'spec':

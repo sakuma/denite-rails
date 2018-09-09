@@ -32,7 +32,8 @@ nnoremap [rails] <Nop>
 nmap     <Leader>r [rails]
 nnoremap [rails]r :Denite<Space>rails:
 nnoremap <silent> [rails]r :<C-u>Denite<Space>rails:dwim<Return>
-nnoremap <silent> [rails]m :<C-u>Denite<Space>rails:app<Return>
+nnoremap <silent> [rails]a :<C-u>Denite<Space>rails:app<Return>
+nnoremap <silent> [rails]p :<C-u>Denite<Space>rails:app<Return>
 nnoremap <silent> [rails]m :<C-u>Denite<Space>rails:model<Return>
 nnoremap <silent> [rails]c :<C-u>Denite<Space>rails:controller<Return>
 nnoremap <silent> [rails]v :<C-u>Denite<Space>rails:view<Return>

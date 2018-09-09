@@ -4,7 +4,7 @@ from all_file import AllFile
 
 
 class AllFinder:
-    GLOB_PATTERN = '*'
+    GLOB_PATTERN = '**/*'
 
     def __init__(self, context):
         self.context = context

@@ -1,9 +1,9 @@
 import os
 import finder_utils
-from frontend_file import ViewFile
+from frontend_file import FrontendFile
 
 
-class ViewFinder:
+class FrontendFinder:
     GLOB_PATTERN = 'frontend/**/*'
 
     def __init__(self, context):

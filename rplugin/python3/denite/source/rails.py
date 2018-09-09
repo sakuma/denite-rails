@@ -15,6 +15,7 @@ site.addsitedir(os.path.join(path_to_modules, 'finders'))
 site.addsitedir(os.path.join(path_to_modules, 'models'))
 
 from dwim_finder import DwimFinder # noqa
+from all_finder import AllFinder # noqa
 from app_finder import AppFinder # noqa
 from model_finder import ModelFinder # noqa
 from controller_finder import ControllerFinder # noqa
@@ -75,6 +76,8 @@ class Source(Base):
         self.vim.command('highlight link deniteSource_railsAssets Statement')
         self.vim.command('syntax match deniteSource_railsApp /App:/')
         self.vim.command('highlight link deniteSource_railsApp Statement')
+        self.vim.command('syntax match deniteSource_railsAll /All:/')
+        self.vim.command('highlight link deniteSource_railsAll Statement')
 
     def gather_candidates(self, context):
         file_list = self._find_files(context)
@@ -90,6 +93,8 @@ class Source(Base):
             finder_class = DwimFinder
         elif target == 'app':
             finder_class = AppFinder
+        elif target == 'all':
+            finder_class = AllFinder
         elif target == 'model':
             finder_class = ModelFinder
         elif target == 'controller':
